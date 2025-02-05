@@ -1,17 +1,30 @@
 import CountButton from '../cart-count-button/count-button';
 import './cart-item.css';
-import Product1 from '/cart-img/product1.png';
 
-function CartItem() {
+type CartItemType = {
+  image: string;
+  name: string;
+  price: number;
+};
+
+function CartItem({ image, name, price }: CartItemType) {
   return (
     <article className="cartItem">
-      <p className="sr-only">장바구니 품목</p>
-      <img src={Product1} alt="상품 이미지" className="productImg" />
+      <p className="sr-only">상품</p>
+      <img src={image} alt="상품 이미지" className="productImg" />
       <dl className="productDetail">
-        <dt className="sr-only">상품명</dt>
-        <dd className="productName">1A 우유 900mL</dd>
-        <dt className="sr-only">가격</dt>
-        <dd className="productPrice">1,880원</dd>
+        <dt className="sr-only" id="productName">
+          상품명
+        </dt>
+        <dd aria-labelledby="productName" className="productName">
+          {name}
+        </dd>
+        <dt className="sr-only" id="productPrice">
+          가격
+        </dt>
+        <dd className="productPrice" aria-labelledby="productPrice">
+          {price.toLocaleString()}원
+        </dd>
       </dl>
       <CountButton />
     </article>
