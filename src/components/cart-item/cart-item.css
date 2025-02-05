@@ -1,0 +1,34 @@
+@layer components {
+  .cartItem {
+    display: flex;
+    max-width: 1000px;
+    min-width: 360px;
+    width: 100%;
+    height: 125px;
+    padding: 13.6px;
+    align-items: center;
+    gap: 20.474px;
+
+    .productImg {
+      width: 109.197px;
+      height: 109.197px;
+      border-radius: 50%;
+    }
+
+    .productDetail {
+      width: 60%;
+    }
+
+    .productName {
+      color: #4d4d4d;
+      font-weight: 400;
+      font-size: 20px;
+    }
+
+    .productPrice {
+      color: #4d4d4d;
+      font-weight: 800;
+      font-size: 20px;
+    }
+  }
+}
