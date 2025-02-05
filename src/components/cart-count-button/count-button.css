@@ -1,0 +1,24 @@
+@layer components {
+  .countButton {
+    width: 76.4px;
+    height: 40.9px;
+    padding: 3.41px 13.6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #B3B3B3;
+    border-radius: 30.712px;
+    background-color: #eee;
+
+    button {
+      background-color: transparent;
+      border: 0;
+      color: #4d4d4d;
+    }
+  }
+
+  .countNumber {
+    color: #4d4d4d;
+    font-weight: 600;
+  }
+}
