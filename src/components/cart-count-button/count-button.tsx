@@ -18,11 +18,25 @@ function CountButton() {
 
   return (
     <div className="countButton">
-      <button type="button" className="minus" onClick={handleCountMinus}>
+      <p className="sr-only">수량 버튼</p>
+      <button
+        type="button"
+        className="minus"
+        aria-label="수량 감소 버튼"
+        disabled={count === 0}
+        onClick={handleCountMinus}
+      >
         -
       </button>
-      <span className="countNumber">{count}</span>
-      <button type="button" className="plus" onClick={handleCountPlus}>
+      <span className="countNumber" aria-live="polite">
+        {count}
+      </span>
+      <button
+        type="button"
+        className="plus"
+        aria-label="수량 증가 버튼"
+        onClick={handleCountPlus}
+      >
         +
       </button>
     </div>
