@@ -14,21 +14,21 @@ interface ProductListType {
 const productList: ProductListType[] = [
   {
     id: 'product-1',
-    image: '/cart-img/product1.png',
+    image: '/cart-img/product1.jpg',
     name: '1A 우유 900mL',
     price: 1880,
     max: 10,
   },
   {
     id: 'product-2',
-    image: '/cart-img/product2.png',
+    image: '/cart-img/product2.jpg',
     name: '맛있는 콩나물 500g',
     price: 1280,
     max: 5,
   },
   {
     id: 'product-3',
-    image: '/cart-img/product3.png',
+    image: '/cart-img/product3.jpg',
     name: '고소한 두부 1kg',
     price: 2280,
     max: 3,
