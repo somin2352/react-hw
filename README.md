@@ -2,24 +2,25 @@
 
 ### 컴포넌트 구성
 
-1. cart-count-button
+1. [cart-count-button](https://github.com/somin2352/react-hw/blob/main/src/components/cart-count-button/count-button.tsx
+)
 
 - sr-only, aria-label, aria-live, aria-disabled 속성을 통해 수량 증감 버튼 사용성 고려
 - 최소 수량(1) 최대 수량(max)에 따른 버튼 비활성화
 - useState를 통해 현재 수량 상태(count) 저장
 - onUpdate 함수를 통해 count 상태 끌어올리기
 
-2. cart-item
+2. [cart-item](https://github.com/somin2352/react-hw/blob/main/src/components/cart-item/cart-item.tsx
+)
 
 - aria-labelledby, sr-only 속성을 통해 상품 정보 제공
 - `<dl>,<dt>,<dd>`를 통해 상품 정보 마크업
 - toLocaleString()을 사용하여 가격 정보 기재
 - onUpdate 함수를 통해 count 상태 전달
 
-3. cart
+3. [cart](https://github.com/somin2352/react-hw/blob/main/src/components/cart/cart.tsx)
 
 - productList에 상품 데이터 저장
-
 - useState를 사용해 초기 상품 수량(productCount, initialCount) 저장
 - map()을 사용하여 상품 정보 렌더링
 - onUpdate 상태 끌어올리기를 통해 count 상태 정보를 productCount 상품 수량에 업데이트
