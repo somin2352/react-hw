@@ -6,47 +6,30 @@
 
 - sr-only, aria-label, aria-live, aria-disabled 속성을 통해 수량 증감 버튼 사용성 고려
 - 최소 수량(1) 최대 수량(max)에 따른 버튼 비활성화
-  <img src='./public/img/cart-count-button1.png' width='300px'>
-
 - useState를 통해 현재 수량 상태(count) 저장
-  <img src='./public/img/cart-count-button2.png' width='300px'>
-
 - onUpdate 함수를 통해 count 상태 끌어올리기
-  <img src='./public/img/cart-count-button3.png' width='200px'>
 
 2. cart-item
 
 - aria-labelledby, sr-only 속성을 통해 상품 정보 제공
 - `<dl>,<dt>,<dd>`를 통해 상품 정보 마크업
 - toLocaleString()을 사용하여 가격 정보 기재
-  <img src='./public/img/cart-item1.png' width='300px'>
-
 - onUpdate 함수를 통해 count 상태 전달
-  <img src='./public/img/cart-item2.png' width='300px'>
 
 3. cart
 
 - productList에 상품 데이터 저장
-  <img src='./public/img/cart1.png' width='250px'>
 
 - useState를 사용해 초기 상품 수량(productCount, initialCount) 저장
-  <img src='./public/img/cart2.png' width='300px'>
-
 - map()을 사용하여 상품 정보 렌더링
-  <img src='./public/img/cart3.png' width='200px'>
-
 - onUpdate 상태 끌어올리기를 통해 count 상태 정보를 productCount 상품 수량에 업데이트
-  <img src='./public/img/cart4.png' width='300px'>
-  <img src='./public/img/cart5.png' width='300px'>
-
 - reduce()를 사용해 상품 총액(totalPrice) 업데이트
-  <img src='./public/img/cart6.png' width='300px'>
 
 ---
 
 ### 결과
 
-<img src='./public/img/result.gif'>
+<img src='./public/cart-img/result.gif'>
 
 ---
 
