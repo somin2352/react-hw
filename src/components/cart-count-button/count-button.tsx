@@ -2,10 +2,10 @@ import { useState } from 'react';
 import './count-button.css';
 
 function CountButton() {
-  const [count, setCount] = useState<number>(0);
+  const [count, setCount] = useState<number>(1);
 
   const handleCountMinus = () => {
-    if (count === 0) return;
+    if (count === 1) return;
 
     const nextCount = count - 1;
     setCount(nextCount);
@@ -23,7 +23,7 @@ function CountButton() {
         type="button"
         className="minus"
         aria-label="수량 감소 버튼"
-        disabled={count === 0}
+        aria-disabled={count === 1}
         onClick={handleCountMinus}
       >
         -
