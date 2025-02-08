@@ -3,6 +3,10 @@
   "name": "react-homework5",
   "version": "1.0.0",
   "description": "쇼핑 카트 UI 구현",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/somin2352/react-hw.git"
+  },
   "engines": {
     "node": ">=22.0.0",
     "npm": ">=9.0.0",
