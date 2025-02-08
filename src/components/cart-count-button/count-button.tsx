@@ -3,9 +3,10 @@ import './count-button.css';
 
 interface CountButtonProps {
   onUpdate?: (nextCount: number) => void;
+  max: number;
 }
 
-function CountButton({ onUpdate }: CountButtonProps) {
+function CountButton({ onUpdate, max }: CountButtonProps) {
   const [count, setCount] = useState<number>(1);
 
   const handleCountMinus = () => {
@@ -18,6 +19,8 @@ function CountButton({ onUpdate }: CountButtonProps) {
   };
 
   const handleCountPlus = () => {
+    if (count === max) return;
+
     const nextCount = count + 1;
     setCount(nextCount);
 
@@ -43,6 +46,7 @@ function CountButton({ onUpdate }: CountButtonProps) {
         type="button"
         className="plus"
         aria-label="수량 증가 버튼"
+        aria-disabled={count === max}
         onClick={handleCountPlus}
       >
         +

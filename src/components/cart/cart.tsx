@@ -8,6 +8,7 @@ interface ProductListType {
   image: string;
   name: string;
   price: number;
+  max: number;
 }
 
 const productList: ProductListType[] = [
@@ -16,18 +17,21 @@ const productList: ProductListType[] = [
     image: '/cart-img/product1.png',
     name: '1A 우유 900mL',
     price: 1880,
+    max: 10,
   },
   {
     id: 'product-2',
     image: '/cart-img/product2.png',
     name: '맛있는 콩나물 500g',
     price: 1280,
+    max: 5,
   },
   {
     id: 'product-3',
     image: '/cart-img/product3.png',
     name: '고소한 두부 1kg',
     price: 2280,
+    max: 3,
   },
 ];
 
@@ -65,6 +69,7 @@ function Cart() {
             image={item.image}
             name={item.name}
             price={item.price}
+            max={item.max}
             onUpdate={(count: number) => handleUpdateTotalPrice(item.id, count)}
           />
         ))}
