@@ -29,7 +29,7 @@
 
 ### 결과
 
-<img src='./public/result.gif'>
+![Image](https://github.com/user-attachments/assets/bd098799-4330-4630-9a4e-81f1513e4785)
 
 ---
 
