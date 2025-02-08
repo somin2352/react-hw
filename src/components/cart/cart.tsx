@@ -77,7 +77,7 @@ function Cart() {
 
       <dl className="totalPrice">
         <dt id="totalPrice">구매 총액:</dt>
-        <dd className="price" aria-labelledby="totalPrice">
+        <dd className="price" aria-labelledby="totalPrice" aria-live="polite">
           {totalPrice.toLocaleString()}원
         </dd>
       </dl>
