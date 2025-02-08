@@ -6,7 +6,7 @@
 
 - sr-only, aria-label, aria-live, aria-disabled 속성을 통해 수량 증감 버튼 사용성 고려
 - 최소 수량(1) 최대 수량(max)에 따른 버튼 비활성화
-  ![image](https://github.com/somin2352/react-hw/blob/main/public/readme-img/cart-count-button1.png)
+  <img src='./public/readme-img/cart-count-button1.png' width='300px'>
 
 - useState를 통해 현재 수량 상태(count) 저장
   <img src='./public/readme-img/cart-count-button2.png' width='300px'>
