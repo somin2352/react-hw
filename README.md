@@ -29,7 +29,7 @@
 
 ### 결과
 
-<img src='./public/cart-img/result.gif'>
+<img src='./cart-img/result.gif'>
 
 ---
 
