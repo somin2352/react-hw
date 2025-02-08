@@ -1,7 +1,11 @@
 import { useState } from 'react';
 import './count-button.css';
 
-function CountButton() {
+interface CountButtonProps {
+  onUpdate?: (nextCount: number) => void;
+}
+
+function CountButton({ onUpdate }: CountButtonProps) {
   const [count, setCount] = useState<number>(1);
 
   const handleCountMinus = () => {
@@ -9,11 +13,15 @@ function CountButton() {
 
     const nextCount = count - 1;
     setCount(nextCount);
+
+    onUpdate?.(nextCount);
   };
 
   const handleCountPlus = () => {
     const nextCount = count + 1;
     setCount(nextCount);
+
+    onUpdate?.(nextCount);
   };
 
   return (

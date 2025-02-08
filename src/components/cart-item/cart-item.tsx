@@ -5,9 +5,10 @@ type CartItemType = {
   image: string;
   name: string;
   price: number;
+  onUpdate?: (count: number) => void;
 };
 
-function CartItem({ image, name, price }: CartItemType) {
+function CartItem({ image, name, price, onUpdate }: CartItemType) {
   return (
     <article className="cartItem">
       <p className="sr-only">상품</p>
@@ -26,7 +27,7 @@ function CartItem({ image, name, price }: CartItemType) {
           {price.toLocaleString()}원
         </dd>
       </dl>
-      <CountButton />
+      <CountButton onUpdate={onUpdate} />
     </article>
   );
 }

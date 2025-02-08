@@ -1,6 +1,7 @@
 import CartItem from '../cart-item/cart-item';
 import CartIcon from '/cart-img/cartIcon.svg';
 import './cart.css';
+import { useState } from 'react';
 
 interface ProductListType {
   id: string;
@@ -31,6 +32,25 @@ const productList: ProductListType[] = [
 ];
 
 function Cart() {
+  const [productCount, setProductCount] = useState(() => {
+    const initialCount: { [key: string]: number } = {};
+    productList.forEach((product) => {
+      initialCount[product.id] = 1;
+    });
+    return initialCount;
+  });
+
+  const totalPrice = productList.reduce((total, product) => {
+    return (total = total + product.price * productCount[product.id]);
+  }, 0);
+
+  const handleUpdateTotalPrice = (id: string, count: number) => {
+    setProductCount((prevCount) => ({
+      ...prevCount,
+      [id]: count,
+    }));
+  };
+
   return (
     <div className="cart">
       <h2 className="cartTitle">
@@ -45,6 +65,7 @@ function Cart() {
             image={item.image}
             name={item.name}
             price={item.price}
+            onUpdate={(count: number) => handleUpdateTotalPrice(item.id, count)}
           />
         ))}
       </div>
@@ -52,7 +73,7 @@ function Cart() {
       <dl className="totalPrice">
         <dt id="totalPrice">구매 총액:</dt>
         <dd className="price" aria-labelledby="totalPrice">
-          8,600원
+          {totalPrice.toLocaleString()}원
         </dd>
       </dl>
     </div>
