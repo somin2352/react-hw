@@ -1,0 +1,28 @@
+.card {
+  display: flex;
+  width: 327px;
+  height: 208px;
+  padding: 24px;
+  align-items: center;
+  gap: 16px;
+  border-radius: 16px;
+  background: #FBFCFF;
+
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .user-name {
+    color: #151B32;
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+  .tags {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+  }
+}
